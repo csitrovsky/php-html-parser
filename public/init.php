@@ -14,6 +14,7 @@ const CORE_PUBLIC_DIR = ROOT_DIR . 'public' . DS;
 const CORE_ELEMENTS_DIR = CORE_PUBLIC_DIR . 'elements' . DS;
 const CORE_LAYOUTS_DIR = CORE_ELEMENTS_DIR . 'layouts' . DS;
 const CORE_TEMPLATES_DIR = CORE_ELEMENTS_DIR . 'templates' . DS;
+const CORE_RESOURCE_DIR = CORE_PUBLIC_DIR . 'resource' . DS;
 const CORE_SRC_DIR = ROOT_DIR . 'src' . DS;
 
 error_reporting(E_ALL & ~E_NOTICE);

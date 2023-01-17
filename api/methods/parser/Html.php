@@ -31,12 +31,13 @@ class Html extends Engine
             $this->response('Строка не является ссылкой', 400);
         }
         $html = file_get_contents($url);
+        $html = iconv('utf-8//IGNORE', 'windows-1251//IGNORE', $html);
         $search = preg_match_all('/<([^\/!][a-z1-9]*)/i', $html, $matches);
-        $html = array_count_values(next($matches));
-        if (count($html) <= 0) {
+        $tags = array_count_values($matches[1]);
+        if (count($tags) <= 0) {
             $this->response('Страница пуста', 400);
         }
         
-        return (object)$this->results = ['tags' => $html];
+        return (object)$this->results = ['tags' => $tags];
     }
 }
