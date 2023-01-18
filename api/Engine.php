@@ -12,7 +12,7 @@ namespace api;
  * @property mixed             $method
  * @property mixed             $contents
  */
-abstract class Engine
+abstract class Engine implements Controller
 {
     
     /**
